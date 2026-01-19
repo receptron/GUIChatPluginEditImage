@@ -1,5 +1,7 @@
 # @gui-chat-plugin/edit-image
 
+[![npm version](https://badge.fury.io/js/%40gui-chat-plugin%2Fedit-image.svg)](https://www.npmjs.com/package/@gui-chat-plugin/edit-image)
+
 Image editing plugin for GUI Chat applications. Edit previously generated images based on text prompts.
 
 ## Features
@@ -84,6 +86,14 @@ yarn build
 # Lint
 yarn lint
 ```
+
+## Test Prompts
+
+Try these prompts to test the plugin (after generating an image first):
+
+1. "Add a rainbow in the sky of this image"
+2. "Change the background to a beach scene"
+3. "Make the colors more vibrant and add some butterflies"
 
 ## License
 
