@@ -30,7 +30,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "gui-chat-protocol": "^0.0.1"
+    "gui-chat-protocol": "^0.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
