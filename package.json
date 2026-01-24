@@ -1,6 +1,6 @@
 {
   "name": "@gui-chat-plugin/edit-image",
-  "version": "0.0.2",
+  "version": "0.3.0",
   "description": "Image editing plugin for GUI Chat applications",
   "type": "module",
   "main": "./dist/index.cjs",
