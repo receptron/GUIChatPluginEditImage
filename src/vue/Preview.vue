@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-[100px] flex items-center justify-center">
+  <div class="min-h-24 flex items-center justify-center">
     <img
       v-if="result.data?.imageData"
       :src="result.data.imageData"
