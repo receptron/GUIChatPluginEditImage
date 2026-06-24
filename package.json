@@ -1,6 +1,6 @@
 {
   "name": "@gui-chat-plugin/edit-image",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Image editing plugin for GUI Chat applications",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -30,7 +30,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "gui-chat-protocol": "^0.3.3"
+    "gui-chat-protocol": "^0.4.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
