@@ -13,8 +13,11 @@ Image editing plugin for GUI Chat applications. Edit previously generated images
 ## Installation
 
 ```bash
-yarn add @gui-chat-plugin/edit-image
+yarn add @gui-chat-plugin/edit-image gui-chat-protocol
 ```
+
+> `gui-chat-protocol` is a peer dependency — install it alongside the plugin; the host application provides the runtime and this plugin only declares the compatible range.
+
 
 ## Usage
 
