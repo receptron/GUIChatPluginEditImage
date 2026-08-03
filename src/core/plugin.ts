@@ -1,5 +1,6 @@
 import type { ToolContext, ToolPluginCore } from "gui-chat-protocol";
 import type { EditImageArgs, ImageToolData, EditImageResult } from "./types";
+import { isEditImageResult } from "./hostResponse";
 import { TOOL_NAME, TOOL_DEFINITION } from "./definition";
 
 // context is nullable on purpose: hosts that run the plugin without client-side
@@ -15,7 +16,12 @@ export const editImage = async (
     return { message: "editImage function not available" };
   }
 
-  return context.app.editImage(prompt);
+  const result = await context.app.editImage(prompt);
+  if (!isEditImageResult(result)) {
+    return { message: "editImage returned an unrecognized response" };
+  }
+
+  return result;
 };
 
 export const pluginCore: ToolPluginCore<ImageToolData, unknown, EditImageArgs> = {
