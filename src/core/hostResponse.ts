@@ -1,18 +1,12 @@
 import type { EditImageResult, ImageToolData } from "./types";
 
-const isRecord = (value: unknown): value is Record<string, unknown> =>
-  typeof value === "object" && value !== null;
+const isRecord = (value: unknown): value is Record<string, unknown> => typeof value === "object" && value !== null;
 
-const isOptionalString = (value: unknown): value is string | undefined =>
-  value === undefined || typeof value === "string";
+const isOptionalString = (value: unknown): value is string | undefined => value === undefined || typeof value === "string";
 
-const isOptionalBoolean = (value: unknown): value is boolean | undefined =>
-  value === undefined || typeof value === "boolean";
+const isOptionalBoolean = (value: unknown): value is boolean | undefined => value === undefined || typeof value === "boolean";
 
-const isImageToolData = (value: unknown): value is ImageToolData =>
-  isRecord(value) &&
-  typeof value.imageData === "string" &&
-  typeof value.prompt === "string";
+const isImageToolData = (value: unknown): value is ImageToolData => isRecord(value) && typeof value.imageData === "string" && typeof value.prompt === "string";
 
 // The host builds the whole ToolResult for this tool, so every field the
 // protocol declares is checked rather than just the ones read back here.

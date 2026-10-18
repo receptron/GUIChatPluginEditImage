@@ -27,17 +27,11 @@ describe("isEditImageResult", () => {
   });
 
   test("rejects a result without a message", () => {
-    assert.equal(
-      isEditImageResult({ data: { imageData: "base64", prompt: "a cat" } }),
-      false,
-    );
+    assert.equal(isEditImageResult({ data: { imageData: "base64", prompt: "a cat" } }), false);
   });
 
   test("rejects image data missing the prompt the view renders", () => {
-    assert.equal(
-      isEditImageResult({ message: "Edited", data: { imageData: "base64" } }),
-      false,
-    );
+    assert.equal(isEditImageResult({ message: "Edited", data: { imageData: "base64" } }), false);
   });
 
   test("rejects a result whose optional fields have the wrong type", () => {
@@ -47,11 +41,7 @@ describe("isEditImageResult", () => {
 
   test("rejects values that are not a result object", () => {
     [null, undefined, "ok", 7].forEach((value) => {
-      assert.equal(
-        isEditImageResult(value),
-        false,
-        `should reject ${JSON.stringify(value)}`,
-      );
+      assert.equal(isEditImageResult(value), false, `should reject ${JSON.stringify(value)}`);
     });
   });
 });
