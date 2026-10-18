@@ -1,6 +1,7 @@
 # @gui-chat-plugin/edit-image
 
 [![npm version](https://badge.fury.io/js/%40gui-chat-plugin%2Fedit-image.svg)](https://www.npmjs.com/package/@gui-chat-plugin/edit-image)
+[![scoria](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/receptron/GUIChatPluginEditImage/badges/scoria.json)](https://github.com/receptron/GUIChatPluginEditImage/actions/workflows/scoria.yml)
 
 Image editing plugin for GUI Chat applications. Edit previously generated images based on text prompts.
 
