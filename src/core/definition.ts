@@ -9,8 +9,7 @@ export const TOOL_DEFINITION = {
     properties: {
       prompt: {
         type: "string",
-        description:
-          "Description of the edits to be made to the image in English",
+        description: "Description of the edits to be made to the image in English",
       },
     },
     required: ["prompt"],

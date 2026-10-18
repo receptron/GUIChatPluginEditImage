@@ -21,11 +21,7 @@ export const plugin: ToolPlugin<ImageToolData, unknown, EditImageArgs> = {
 
 export type { ImageToolData, EditImageArgs, EditImageResult } from "../core/types";
 
-export {
-  TOOL_DEFINITION,
-  executeEditImage,
-  pluginCore,
-} from "../core/plugin";
+export { TOOL_DEFINITION, executeEditImage, pluginCore } from "../core/plugin";
 
 export { samples } from "../core/samples";
 
