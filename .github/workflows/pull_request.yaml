@@ -1,5 +1,6 @@
 # This workflow runs lint / typecheck / build / test across
-# Linux + Windows + macOS on Node 24.x and 26.x (engines: node >=24).
+# Linux + Windows + macOS on Node 22.x, 24.x and 26.x (engines: node >=22).
+# scoria (a devDependency) needs Node 24, so Node 22 installs with --ignore-engines.
 # Reference: ../mulmoclaude/.github/workflows/pull_request.yaml
 
 name: Node.js CI
@@ -22,7 +23,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [24.x, 26.x]
+        node-version: [22.x, 24.x, 26.x]
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
     - uses: actions/checkout@v7
@@ -47,7 +48,7 @@ jobs:
         key: win-node-modules-${{ matrix.node-version }}-${{ hashFiles('yarn.lock') }}
         restore-keys: |
           win-node-modules-${{ matrix.node-version }}-
-    - run: yarn install --frozen-lockfile --network-timeout 120000
+    - run: yarn install --frozen-lockfile --network-timeout 120000 ${{ matrix.node-version == '22.x' && '--ignore-engines' || '' }}
     - run: yarn run typecheck
     - run: yarn run lint
     - run: yarn run build
